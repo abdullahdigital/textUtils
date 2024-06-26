@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}TextUtils - Advanced Features{% endblock %}
+
+{% block content %}
+<div class="alert alert-custom alert-dismissible fade show" role="alert">
+    <strong>Advanced TextUtils Features!</strong> Explore more functionalities.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<form action="{% url 'analyze_advanced' %}" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Enter Your text here!</label>
+        <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="6"></textarea>
+    </div>
+    <div class="mb-3" id="comparison-text-container" style="display: none;">
+        <label for="comparisonText" class="form-label">Enter text to compare with:</label>
+        <textarea class="form-control" name="comparison_text" id="comparisonText" rows="6"></textarea>
+    </div>
+    <div class="mb-3" id="find-replace-container" style="display: none;">
+        <label for="findText" class="form-label">Find:</label>
+        <textarea class="form-control" name="find_text" id="findText" rows="2"></textarea>
+        <label for="replaceText" class="form-label">Replace:</label>
+        <textarea class="form-control" name="replace_text" id="replaceText" rows="2"></textarea>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="wordcount" type="checkbox" id="flexSwitchCheckWordCount">
+        <label class="form-check-label" for="flexSwitchCheckWordCount">Word Count</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="sentencecount" type="checkbox" id="flexSwitchCheckSentenceCount">
+        <label class="form-check-label" for="flexSwitchCheckSentenceCount">Sentence Count</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="titlecase" type="checkbox" id="flexSwitchCheckTitleCase">
+        <label class="form-check-label" for="flexSwitchCheckTitleCase">Title Case</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="reversetext" type="checkbox" id="flexSwitchCheckReverseText">
+        <label class="form-check-label" for="flexSwitchCheckReverseText">Reverse Text</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="palindrome" type="checkbox" id="flexSwitchCheckPalindrome">
+        <label class="form-check-label" for="flexSwitchCheckPalindrome">Palindrome Checker</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="encryption" type="checkbox" id="flexSwitchCheckEncryption">
+        <label class="form-check-label" for="flexSwitchCheckEncryption">Text Encryption</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="decryption" type="checkbox" id="flexSwitchCheckDecryption">
+        <label class="form-check-label" for="flexSwitchCheckDecryption">Text Decryption</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="summarization" type="checkbox" id="flexSwitchCheckSummarization">
+        <label class="form-check-label" for="flexSwitchCheckSummarization">Text Summarization</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="findreplace" type="checkbox" id="flexSwitchCheckFindReplace" onchange="toggleFindReplaceContainer()">
+        <label class="form-check-label" for="flexSwitchCheckFindReplace">Find and Replace</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="textcomparison" type="checkbox" id="flexSwitchCheckTextComparison" onchange="toggleComparisonTextContainer()">
+        <label class="form-check-label" for="flexSwitchCheckTextComparison">Text Comparison</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="caseconverter" type="checkbox" id="flexSwitchCheckCaseConverter">
+        <label class="form-check-label" for="flexSwitchCheckCaseConverter">Case Converter</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="readabilityscore" type="checkbox" id="flexSwitchCheckReadabilityScore">
+        <label class="form-check-label" for="flexSwitchCheckReadabilityScore">Readability Score</label>
+    </div>
+    <button type="submit" class="btn btn-custom mt-2">Analyze Now</button>
+</form>
+
+<script>
+function toggleComparisonTextContainer() {
+    var comparisonCheckbox = document.getElementById('flexSwitchCheckTextComparison');
+    var comparisonContainer = document.getElementById('comparison-text-container');
+    if (comparisonCheckbox.checked) {
+        comparisonContainer.style.display = 'block';
+    } else {
+        comparisonContainer.style.display = 'none';
+    }
+}
+
+function toggleFindReplaceContainer() {
+    var findReplaceCheckbox = document.getElementById('flexSwitchCheckFindReplace');
+    var findReplaceContainer = document.getElementById('find-replace-container');
+    if (findReplaceCheckbox.checked) {
+        findReplaceContainer.style.display = 'block';
+    } else {
+        findReplaceContainer.style.display = 'none';
+    }
+}
+</script>
+
+{% endblock %}

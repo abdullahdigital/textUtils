@@ -1,0 +1,246 @@
+{% extends 'base.html' %}
+
+{% block title %}TextUtils - Features{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4 text-center">Features of TextUtils</h1>
+
+            <div class="accordion" id="featuresAccordion">
+
+                <!-- Feature 1: Remove Punctuation -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Remove Punctuation
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Remove punctuation marks from your text with the click of a button. Useful for cleaning up text for analysis or readability.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Upper Case -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Upper Case Conversion
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Convert your text to uppercase with ease. Ideal for making text stand out or ensuring consistency.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: New Line Remover -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            New Line Remover
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Remove unnecessary new line characters from your text. Makes text easier to read or process.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Extra Space Remover -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Extra Space Remover
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Eliminate extra spaces between words or sentences in your text. Ensures a clean and consistent appearance.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 5: Character Counter -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Character Counter
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Count the number of characters in your text. Useful for compliance checks or length restrictions.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 6: Word Count -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Word Count
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Calculate the number of words in your text. Helpful for analyzing content or creating summaries.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 7: Sentence Count -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Sentence Count
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Determine the number of sentences in your text. Useful for analyzing text structure or readability.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 8: Title Case -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            Title Case Conversion
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Convert your text to title case. Ideal for creating headings or titles with proper capitalization.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 9: Reverse Text -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            Reverse Text
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Reverse the order of characters in your text. Useful for encoding or creative formatting.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 10: Palindrome Checker -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            Palindrome Checker
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Check if your text reads the same forwards and backwards. Fun for language games or puzzles.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 11: Text Encryption -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEleven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                            Text Encryption
+                        </button>
+                    </h2>
+                    <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Encrypt your text using a simple cipher. Useful for secure messaging or basic privacy needs.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 12: Text Decryption -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwelve">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                            Text Decryption
+                        </button>
+                    </h2>
+                    <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Decrypt previously encrypted text. Allows you to recover original messages or content.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 13: Text Summarization -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThirteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                            Text Summarization
+                        </button>
+                    </h2>
+                    <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Create a concise summary of your text. Great for condensing long articles or documents.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 14: Find and Replace -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFourteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                            Find and Replace
+                        </button>
+                    </h2>
+                    <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Search for specific text and replace it with another. Handy for editing or formatting large documents.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 15: Text Comparison -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFifteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                            Text Comparison
+                        </button>
+                    </h2>
+                    <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Compare two texts side-by-side to identify differences or similarities. Useful for content analysis or plagiarism detection.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 16: Case Converter -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSixteen">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                            Case Converter
+                        </button>
+                    </h2>
+                    <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen" data-bs-parent="#featuresAccordion">
+                        <div class="accordion-body">
+                            Convert text to different cases (e.g., uppercase, lowercase, title case). Enhances text formatting and readability.
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- End accordion -->
+
+            <div class="text-center mt-5">
+                <a href="{% url 'index' %}" class="btn btn-custom btn-lg">Learn How It Works</a>
+            </div>
+
+        </div> <!-- End col-lg-8 -->
+    </div> <!-- End row -->
+</div> <!-- End container -->
+{% endblock %}

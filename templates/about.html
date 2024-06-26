@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}TextUtils - About Us{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4 text-center">About TextUtils</h1>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Our Mission</h5>
+                    <p class="card-text">TextUtils is dedicated to enhancing text-related abilities for everyone, from writers and bloggers to business professionals. Our mission is to provide powerful yet accessible tools that simplify text editing and enhance productivity.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Project Inspiration</h5>
+                    <p class="card-text">TextUtils started as a personal project aimed at creating a portfolio piece while addressing a practical need in text processing. It serves as both a showcase of technical skills and a helpful resource for individuals seeking efficient text management.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Design and Development</h5>
+                    <p class="card-text">Developed entirely by a solo creator, TextUtils prioritizes user experience with a visually appealing interface and comprehensive text manipulation features. Every tool is designed to be intuitive, making complex text tasks simple and accessible.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Achievements</h5>
+                    <p class="card-text">TextUtils stands as a significant achievement, combining technical expertise with creative design. Its success lies in providing a seamless blend of functionality and aesthetics, making it an essential tool for anyone working extensively with text.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Our Approach</h5>
+                    <p class="card-text">We strive to maintain a friendly and inviting environment, encouraging users to explore and utilize TextUtils for their text-related tasks. Our approach is geared towards continuous improvement based on user feedback and evolving demands.</p>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Future Plans</h5>
+                    <p class="card-text">TextUtils plans future expansions to meet growing user needs and technological advancements. While currently managed independently, we are open to potential collaborations and community involvement to enhance TextUtils further.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="{% url 'index' %}" class="btn btn-custom btn-lg">Explore TextUtils</a>
+            </div>
+        </div> <!-- End col-lg-8 -->
+    </div> <!-- End row -->
+</div> <!-- End container -->
+{% endblock %}

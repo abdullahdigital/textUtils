@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}TextUtils - Home{% endblock %}
+
+{% block content %}
+<div class="alert alert-custom alert-dismissible fade show" role="alert">
+    <strong>Welcome to TextUtils!</strong> You can play around.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<form action="/analyze" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Enter Your text here!</label>
+        <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="6"></textarea>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="removepunc" type="checkbox" id="flexSwitchCheckDefault1">
+        <label class="form-check-label" for="flexSwitchCheckDefault1">Remove Punctuation</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="fullcaps" type="checkbox" id="flexSwitchCheckDefault2">
+        <label class="form-check-label" for="flexSwitchCheckDefault2">Upper Case</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="newlineremover" type="checkbox" id="flexSwitchCheckDefault3">
+        <label class="form-check-label" for="flexSwitchCheckDefault3">New Line Remover</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="extraspaceremover" type="checkbox" id="flexSwitchCheckDefault4">
+        <label class="form-check-label" for="flexSwitchCheckDefault4">Extra Space Remover</label>
+    </div>
+    <div class="form-check form-switch">
+        <input class="form-check-input" name="charactercounter" type="checkbox" id="flexSwitchCheckDefault5">
+        <label class="form-check-label" for="flexSwitchCheckDefault5">Character Counter</label>
+    </div>
+    <button type="submit" class="btn btn-custom mt-2">Analyze Now</button>
+</form>
+<a href="{% url 'advanced_features' %}" class="btn btn-secondary mt-3">Go to Advanced Features</a>
+{% endblock %}
